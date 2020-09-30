@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <VersionPrefix>1.0.0.0</VersionPrefix>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -10,6 +10,14 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <RootNamespace>App.ExemploMvc</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Common\**" />
+    <EmbeddedResource Remove="Common\**" />
+    <None Remove="Common\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Tasks\Dtos\CreateTaskInput.cs" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App.ExemploMvc.Core\App.ExemploMvc.Core.csproj" />
   </ItemGroup>

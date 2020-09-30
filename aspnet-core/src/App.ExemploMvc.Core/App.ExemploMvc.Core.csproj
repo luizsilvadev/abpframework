@@ -15,6 +15,11 @@
     <EmbeddedResource Include="Localization\SourceFiles\*.xml" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="People\**" />
+    <EmbeddedResource Remove="People\**" />
+    <None Remove="People\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Abp.AutoMapper" Version="5.10.1" />
     <PackageReference Include="Abp.ZeroCore.EntityFrameworkCore" Version="5.10.1" />
     <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.3.1" />
