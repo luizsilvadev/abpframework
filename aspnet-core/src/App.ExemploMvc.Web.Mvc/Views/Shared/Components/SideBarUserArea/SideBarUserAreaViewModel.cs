@@ -10,6 +10,7 @@ namespace App.ExemploMvc.Web.Views.Shared.Components.SideBarUserArea
 
         public string GetShownLoginName()
         {
+
             var userName = LoginInformations.User.UserName;
 
             if (!IsMultiTenancyEnabled)

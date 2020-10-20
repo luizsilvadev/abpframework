@@ -3,8 +3,8 @@
 @model App.ExemploMvc.Web.Models.Tasks.IndexViewModel
 
 @{ 
-    ViewBag.ActiveMenu = "TaskList"; 
-    ViewBag.Title = L("TaskList"); 
+    ViewBag.Title = L("TaskList");
+    ViewBag.CurrentPageName = PageNames.TaskList;
 }
 <div class="content-header">
     <div class="container-fluid">
@@ -26,10 +26,10 @@
                             @foreach (var task in Model.Tasks)
                             {
                                 <li class="list-group-item">
-                                    <span class="pull-right label @Model.GetTaskLabel(task)">@L($"TaskState_{task.State}")</span>
+                                    <span class="float-right badge @Model.GetTaskLabel(task)">@L($"TaskState_{task.State}")</span>
                                     <h4 class="list-group-item-heading">@task.Title</h4>
                                     <div class="list-group-item-text">
-                                        @task.CreationTime.ToString("yyyy-MM-dd HH:mm:ss")
+                                        @task.CreationTime.ToString("dd/MM/yyyy HH:mm:ss")
                                     </div>
                                 </li>
                             }

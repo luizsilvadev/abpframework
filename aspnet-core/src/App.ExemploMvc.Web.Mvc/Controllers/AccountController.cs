@@ -79,7 +79,7 @@ namespace App.ExemploMvc.Web.Controllers
         {
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
-                returnUrl = GetAppHomeUrl();
+                returnUrl = "BackHome";
             }
 
             return View(new LoginFormViewModel

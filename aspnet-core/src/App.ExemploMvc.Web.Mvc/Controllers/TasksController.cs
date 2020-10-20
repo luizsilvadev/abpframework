@@ -1,16 +1,15 @@
 ﻿
 using System.Threading.Tasks;
-using Abp.Application.Services.Dto;
 using App.ExemploMvc.Tasks;
 using App.ExemploMvc.Tasks.Dtos;
 using App.ExemploMvc.Web.Models.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using App.ExemploMvc.Controllers;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Linq;
+using Abp.AspNetCore.Mvc.Authorization;
 
 namespace App.ExemploMvc.Web.Controllers
 {
+    [AbpMvcAuthorize]
     public class TasksController : ExemploMvcControllerBase
     {
         private readonly ITaskAppService _taskAppService;

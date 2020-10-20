@@ -107,6 +107,7 @@
     <text name="TenantDeleteWarningMessage">O Tenant {0} será excluído.</text>
     <text name="SearchWithThreeDot">Pesquisar...</text>
     <text name="TaskList">Lista de Tarefas</text>
+    <text name="BackHomePage">Página Inicial Admin</text>
     <text name="TaskState_Open">Aberta</text>
     <text name="TaskState_Completed">Completa</text>
   </texts>

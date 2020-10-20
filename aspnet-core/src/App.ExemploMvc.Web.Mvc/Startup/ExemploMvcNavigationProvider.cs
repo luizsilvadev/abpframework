@@ -15,9 +15,9 @@ namespace App.ExemploMvc.Web.Startup
             context.Manager.MainMenu
                 .AddItem(
                     new MenuItemDefinition(
-                        PageNames.Home,
-                        L("HomePage"),
-                        url: "",
+                        PageNames.BackHome,
+                        L("BackHomePage"),
+                        url: "BackHome",
                         icon: "fas fa-home",
                         requiresAuthentication: true
                     )
@@ -45,20 +45,13 @@ namespace App.ExemploMvc.Web.Startup
                         icon: "fas fa-theater-masks",
                         permissionDependency: new SimplePermissionDependency(PermissionNames.Pages_Roles)
                             )
-                )
-                .AddItem(
-                    new MenuItemDefinition(
-                        PageNames.About,
-                        L("About"),
-                        url: "About",
-                        icon: "fas fa-info-circle"
-                    )
                 ).AddItem(
                     new MenuItemDefinition(
-                        "TaskList",
+                        PageNames.TaskList,
                         L("TaskList"),
                         url: "Tasks",
-                        icon: "fas fa-tasks"
+                        icon: "fas fa-tasks",
+                        requiresAuthentication: true
                     )
                 );
         }

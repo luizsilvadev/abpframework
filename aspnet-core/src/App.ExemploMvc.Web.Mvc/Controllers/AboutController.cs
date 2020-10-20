@@ -4,7 +4,6 @@ using App.ExemploMvc.Controllers;
 
 namespace App.ExemploMvc.Web.Controllers
 {
-    [AbpMvcAuthorize]
     public class AboutController : ExemploMvcControllerBase
     {
         public ActionResult Index()
